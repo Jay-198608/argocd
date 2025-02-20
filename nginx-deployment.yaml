@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 2  # 設定2個副本
+  replicas: 1  # 設定2個副本
   selector:
     matchLabels:
       app: nginx
