@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: p1
+  namespace: argocd
+spec:
+  sourceRepos:
+    - "*"
+  destinations:
+    - namespace: "*"
+      server: "*"  # 允許 Kubernetes 內部集群
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+status: {}
